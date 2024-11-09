@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /test-web/
+
+# Arahkan semua permintaan ke index.php, kecuali file atau direktori yang ada
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]
